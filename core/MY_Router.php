@@ -35,7 +35,8 @@ class MY_Router extends CI_Router {
 
         // Does the requested controller exist in the root folder?
         // if the  controller exists then check if exists a controller in the full path 
-        if (file_exists(APPPATH.'controllers/'.$segments[0].EXT) && !file_exists(APPPATH.'controllers/'.implode("/",$segments).EXT) )
+        if (file_exists(APPPATH.'controllers/'.$segments[0].EXT) 
+            && !file_exists(APPPATH.'controllers/'.implode("/",$segments).EXT) )
         {
             return $segments;
         }
